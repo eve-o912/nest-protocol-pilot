@@ -49,32 +49,48 @@ function IndexComponent() {
 
       {/* Hero */}
       <section className="py-24 sm:py-32">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Reveal>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 animate-fade-in animate-delay-100">
-              Your business finances, built to work.
-            </h1>
-          </Reveal>
-          <Reveal delay={100}>
-            <p className="text-lg sm:text-xl text-muted-foreground mb-8 animate-fade-in animate-delay-200">
-              Nest unifies every part of your business finances into one living, intelligent system — giving you real-time visibility, AI-powered decisions, and a verified credit identity that compounds as your business grows. This is financial infrastructure.
-            </p>
-          </Reveal>
-          <Reveal delay={200}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in animate-delay-300">
-              <Link to="/auth">
-                <Button size="lg" className="w-full sm:w-auto">
-                  Start your free trial
-                  <ArrowRight className="w-4 h-4" />
-                </Button>
-              </Link>
-              <Link to="#how-it-works">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto">
-                  See how it works
-                </Button>
-              </Link>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <Reveal>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 animate-fade-in animate-delay-100">
+                  Your CFO, always watching
+                </h1>
+              </Reveal>
+              <Reveal delay={100}>
+                <p className="text-lg sm:text-xl text-muted-foreground mb-8 animate-fade-in animate-delay-200">
+                  Manikka spots cash flow risks, flags unusual patterns, and suggests solutions so your business stays ahead. Smart notifications you can trust.
+                </p>
+              </Reveal>
+              <Reveal delay={200}>
+                <Link to="/auth">
+                  <Button size="lg" className="animate-fade-in animate-delay-300">
+                    Claim Live Now
+                  </Button>
+                </Link>
+              </Reveal>
             </div>
-          </Reveal>
+            <Reveal delay={300}>
+              <Card className="border-border bg-card animate-slide-up">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                      <Brain className="w-5 h-5 text-primary" />
+                    </div>
+                    <CardTitle className="text-lg">Manikka AI Insights</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">
+                    Westlands branch for 40% below your business forecast. Your problem sources are clear. Just learn from real data. Your action plan after analysis, not a notification.
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    Check your cash position 1 day recorded.
+                  </p>
+                </CardContent>
+              </Card>
+            </Reveal>
+          </div>
         </div>
       </section>
 
