@@ -48,337 +48,241 @@ function IndexComponent() {
       </nav>
 
       {/* Hero */}
-      <section className="py-24 sm:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <Reveal>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 animate-fade-in animate-delay-100">
-                  Your CFO, always watching
-                </h1>
-              </Reveal>
-              <Reveal delay={100}>
-                <p className="text-lg sm:text-xl text-muted-foreground mb-8 animate-fade-in animate-delay-200">
-                  Manikka spots cash flow risks, flags unusual patterns, and suggests solutions so your business stays ahead. Smart notifications you can trust.
-                </p>
-              </Reveal>
-              <Reveal delay={200}>
-                <Link to="/auth">
-                  <Button size="lg" className="animate-fade-in animate-delay-300">
-                    Claim Live Now
-                  </Button>
-                </Link>
-              </Reveal>
-            </div>
-            <Reveal delay={300}>
-              <Card className="border-border bg-card animate-slide-up">
-                <CardHeader>
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                      <Brain className="w-5 h-5 text-primary" />
-                    </div>
-                    <CardTitle className="text-lg">Manikka AI Insights</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">
-                    Westlands branch for 40% below your business forecast. Your problem sources are clear. Just learn from real data. Your action plan after analysis, not a notification.
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    Check your cash position 1 day recorded.
-                  </p>
-                </CardContent>
-              </Card>
-            </Reveal>
-          </div>
+      <section className="py-32 sm:py-48">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Reveal>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8 animate-fade-in">
+              The financial data layer for African business.
+            </h1>
+          </Reveal>
+          <Reveal delay={100}>
+            <p className="text-xl sm:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in animate-delay-200">
+              We are the protocol underneath African business finance.
+            </p>
+          </Reveal>
+          <Reveal delay={200}>
+            <Link to="/auth">
+              <Button size="lg" className="animate-fade-in animate-delay-300">
+                Get early access
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
+          </Reveal>
         </div>
       </section>
 
-      {/* Features */}
-      <section id="features" className="py-24 sm:py-32 bg-card/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* The Problem */}
+      <section className="py-24 sm:py-32">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
-              Everything you need to run your business finances
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12">
+              The data disappears.
             </h2>
           </Reveal>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Reveal delay={100}>
+          <Reveal delay={100}>
+            <p className="text-lg sm:text-xl text-muted-foreground text-center mb-8">
+              The informal economy generates trillions in transaction data every day. But it vanishes into the void.
+            </p>
+          </Reveal>
+          <Reveal delay={200}>
+            <div className="grid md:grid-cols-3 gap-8 mt-12">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-destructive mb-2">No structure</div>
+                <p className="text-muted-foreground">Raw data without organization</p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-destructive mb-2">No portability</div>
+                <p className="text-muted-foreground">Trapped in silos</p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-destructive mb-2">No identity</div>
+                <p className="text-muted-foreground">No credit history</p>
+              </div>
+            </div>
+          </Reveal>
+          <Reveal delay={300}>
+            <p className="text-lg text-muted-foreground text-center mt-12">
+              This is a systemic failure. Not a product gap.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* The Protocol */}
+      <section className="py-24 sm:py-32 bg-card/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12">
+              The infrastructure layer
+            </h2>
+          </Reveal>
+          <Reveal delay={100}>
+            <div className="max-w-4xl mx-auto">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+                <div className="flex-1 text-center">
+                  <div className="w-20 h-20 rounded-full bg-muted-foreground/10 flex items-center justify-center mx-auto mb-4">
+                    <Wallet className="w-10 h-10 text-muted-foreground" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">Raw data</h3>
+                  <p className="text-muted-foreground">M-Pesa, bank, till transactions</p>
+                </div>
+                <div className="text-4xl text-muted-foreground">→</div>
+                <div className="flex-1 text-center">
+                  <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <Zap className="w-10 h-10 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">Structure</h3>
+                  <p className="text-muted-foreground">Normalized, verified, enriched</p>
+                </div>
+                <div className="text-4xl text-muted-foreground">→</div>
+                <div className="flex-1 text-center">
+                  <div className="w-20 h-20 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-4">
+                    <Shield className="w-10 h-10 text-secondary" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">Financial Passport</h3>
+                  <p className="text-muted-foreground">Portable credit identity</p>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Financial Passport */}
+      <section className="py-24 sm:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12">
+              The output: Your Financial Passport
+            </h2>
+          </Reveal>
+          <Reveal delay={100}>
+            <div className="max-w-md mx-auto">
+              <Card className="border-border bg-card">
+                <CardHeader>
+                  <div className="flex items-center justify-between mb-4">
+                    <CardTitle>Financial Passport</CardTitle>
+                    <div className="flex items-center gap-2">
+                      <Shield className="w-4 h-4 text-primary" />
+                      <span className="text-sm text-muted-foreground">Verified</span>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-muted-foreground">Credit Score</span>
+                      <span className="text-2xl font-bold text-primary">782</span>
+                    </div>
+                    <div className="h-2 bg-muted rounded-full overflow-hidden">
+                      <div className="h-full bg-primary w-[78%]" />
+                    </div>
+                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border">
+                      <div>
+                        <p className="text-sm text-muted-foreground">Cash Growth</p>
+                        <p className="font-semibold">+23%</p>
+                      </div>
+                      <div>
+                        <p className="text-sm text-muted-foreground">Payment History</p>
+                        <p className="font-semibold">98%</p>
+                      </div>
+                      <div>
+                        <p className="text-sm text-muted-foreground">Debt Ratio</p>
+                        <p className="font-semibold">12%</p>
+                      </div>
+                      <div>
+                        <p className="text-sm text-muted-foreground">Business Age</p>
+                        <p className="font-semibold">3.2 yrs</p>
+                      </div>
+                    </div>
+                    <div className="pt-4 border-t border-border">
+                      <p className="text-xs text-muted-foreground text-center">
+                        Portable • Consent-gated • Cryptographically anchored
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Who plugs in */}
+      <section className="py-24 sm:py-32 bg-card/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12">
+              Who plugs into Nest
+            </h2>
+          </Reveal>
+          <Reveal delay={100}>
+            <div className="grid md:grid-cols-3 gap-8">
               <Card className="border-border bg-card">
                 <CardHeader>
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                     <Wallet className="w-6 h-6 text-primary" />
                   </div>
-                  <CardTitle>Unified Cash Position</CardTitle>
+                  <CardTitle>Business Owners</CardTitle>
                   <CardDescription>
-                    See your complete cash position across M-Pesa, banks, and branch tills in real time. No more switching between apps.
+                    Connect your financial data. Build your credit identity. Access capital on your terms.
                   </CardDescription>
                 </CardHeader>
               </Card>
-            </Reveal>
-            <Reveal delay={200}>
               <Card className="border-border bg-card">
                 <CardHeader>
                   <div className="w-12 h-12 rounded-lg bg-secondary/20 flex items-center justify-center mb-4">
-                    <Brain className="w-6 h-6 text-secondary" />
+                    <TrendingUp className="w-6 h-6 text-secondary" />
                   </div>
-                  <CardTitle>AI-Powered Insights</CardTitle>
+                  <CardTitle>Lenders & Partners</CardTitle>
                   <CardDescription>
-                    Catch problems before they cost money. Our AI identifies cash dips, slow payers, and margin leaks automatically.
+                    Access verified, consent-gated financial data. Make better lending decisions. Reduce risk.
                   </CardDescription>
                 </CardHeader>
               </Card>
-            </Reveal>
-            <Reveal delay={300}>
               <Card className="border-border bg-card">
                 <CardHeader>
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <CreditCard className="w-6 h-6 text-primary" />
+                    <Zap className="w-6 h-6 text-primary" />
                   </div>
-                  <CardTitle>Financial Passport</CardTitle>
+                  <CardTitle>Developers</CardTitle>
                   <CardDescription>
-                    Build a verified credit identity that unlocks loans as your business grows. Your data becomes your asset.
+                    Build on the Nest API. Integrate financial infrastructure into your applications.
                   </CardDescription>
                 </CardHeader>
               </Card>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* How it works */}
-      <section id="how-it-works" className="py-24 sm:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
-              How it works
-            </h2>
+            </div>
           </Reveal>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Reveal delay={100}>
-              <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-primary">
-                  01
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Connect your accounts</h3>
-                <p className="text-muted-foreground">
-                  Link your M-Pesa, bank accounts, and cash tills in minutes. We support all major Kenyan financial institutions.
-                </p>
-              </div>
-            </Reveal>
-            <Reveal delay={200}>
-              <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-secondary">
-                  02
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Manikka learns your business</h3>
-                <p className="text-muted-foreground">
-                  Our AI analyzes your transaction patterns, cash flow, and business relationships to understand your unique needs.
-                </p>
-              </div>
-            </Reveal>
-            <Reveal delay={300}>
-              <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-primary">
-                  03
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Get insights and unlock credit</h3>
-                <p className="text-muted-foreground">
-                  Receive actionable insights, track debts automatically, and build your Financial Passport to access loans.
-                </p>
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-24 sm:py-32 bg-card/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
-              Trusted by businesses across Kenya
-            </h2>
-          </Reveal>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Reveal delay={100}>
-              <Card className="border-border bg-card">
-                <CardContent className="pt-6">
-                  <p className="text-muted-foreground mb-4">
-                    "Nest has completely transformed how I manage my retail business. I can finally see all my cash in one place and the AI insights have helped me recover thousands in overdue payments."
-                  </p>
-                  <p className="font-semibold">— Retail business owner, Nairobi</p>
-                </CardContent>
-              </Card>
-            </Reveal>
-            <Reveal delay={200}>
-              <Card className="border-border bg-card">
-                <CardContent className="pt-6">
-                  <p className="text-muted-foreground mb-4">
-                    "The Financial Passport feature is a game-changer. After using Nest for 6 months, I was able to secure a business loan that I couldn't get before. The data speaks for itself."
-                  </p>
-                  <p className="font-semibold">— SME distributor, Mombasa</p>
-                </CardContent>
-              </Card>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section id="pricing" className="py-24 sm:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
-              Simple, transparent pricing
-            </h2>
-            <p className="text-muted-foreground text-center mb-12">
-              Choose the plan that fits your business. All plans include a 30-day free trial.
+          <Reveal delay={200}>
+            <p className="text-center text-lg text-muted-foreground mt-12">
+              Nest is the connective tissue between all three.
             </p>
           </Reveal>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Reveal delay={100}>
-              <Card className="border-border bg-card">
-                <CardHeader>
-                  <CardTitle>Starter</CardTitle>
-                  <CardDescription>For growing businesses</CardDescription>
-                  <div className="mt-4">
-                    <span className="text-4xl font-bold">KES 1,500</span>
-                    <span className="text-muted-foreground">/mo</span>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    <li className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span>Up to 3 accounts</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span>Basic insights</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span>Financial Passport</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span>Email support</span>
-                    </li>
-                  </ul>
-                  <Link to="/auth" className="mt-6 block">
-                    <Button variant="outline" className="w-full">
-                      Get started
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            </Reveal>
-            <Reveal delay={200}>
-              <Card className="border-2 border-primary bg-card relative">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-background px-3 py-1 rounded-full text-xs font-semibold">
-                  Most popular
-                </div>
-                <CardHeader>
-                  <CardTitle>Growth</CardTitle>
-                  <CardDescription>For scaling businesses</CardDescription>
-                  <div className="mt-4">
-                    <span className="text-4xl font-bold">KES 4,500</span>
-                    <span className="text-muted-foreground">/mo</span>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    <li className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span>Unlimited accounts</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span>Advanced AI insights</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span>Financial Passport Pro</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span>Priority support</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span>AI Advisor access</span>
-                    </li>
-                  </ul>
-                  <Link to="/auth" className="mt-6 block">
-                    <Button className="w-full">
-                      Get started
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            </Reveal>
-            <Reveal delay={300}>
-              <Card className="border-border bg-card">
-                <CardHeader>
-                  <CardTitle>Scale</CardTitle>
-                  <CardDescription>For established businesses</CardDescription>
-                  <div className="mt-4">
-                    <span className="text-4xl font-bold">KES 12,000</span>
-                    <span className="text-muted-foreground">/mo</span>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    <li className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span>Everything in Growth</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span>Multi-location support</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span>Custom integrations</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span>Dedicated account manager</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-primary" />
-                      <span>SLA guarantee</span>
-                    </li>
-                  </ul>
-                  <Link to="/auth" className="mt-6 block">
-                    <Button variant="outline" className="w-full">
-                      Contact sales
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            </Reveal>
-          </div>
         </div>
       </section>
 
-      {/* CTA Band */}
-      <section className="py-24 sm:py-32 bg-gradient-to-br from-primary/20 to-secondary/20">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* CTA */}
+      <section className="py-24 sm:py-32">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Reveal>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Ready to take control of your business finances?
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+              The infrastructure is being built.
             </h2>
-            <p className="text-muted-foreground mb-8">
-              Start your 30-day free trial today. No credit card required.
+            <p className="text-lg text-muted-foreground mb-8">
+              Get early access.
             </p>
-            <Link to="/auth">
-              <Button size="lg">
-                Get started now
-                <ArrowRight className="w-4 h-4" />
+          </Reveal>
+          <Reveal delay={100}>
+            <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+              <Button size="lg" className="w-full sm:w-auto">
+                Join waitlist
               </Button>
-            </Link>
+            </form>
           </Reveal>
         </div>
       </section>
