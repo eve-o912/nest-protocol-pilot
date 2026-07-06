@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Logo } from '@/components/Logo'
+import { recordConsent, DOCUMENT_VERSIONS } from '@/lib/legal-consent'
 
 export const Route = createFileRoute('/auth')({
   component: AuthComponent,
@@ -39,6 +40,10 @@ function AuthComponent() {
       if (isSignUp) {
         // Sign up logic
         console.log('Sign up:', { email, fullName })
+        
+        // Record consent to legal documents on signup
+        await recordConsent('terms', DOCUMENT_VERSIONS.terms)
+        await recordConsent('privacy', DOCUMENT_VERSIONS.privacy)
       } else {
         // Sign in logic
         console.log('Sign in:', { email })
@@ -165,6 +170,23 @@ function AuthComponent() {
             </svg>
             Google
           </Button>
+          
+          {isSignUp && (
+            <div className="mt-4 p-3 bg-muted rounded-lg">
+              <p className="text-xs text-muted-foreground mb-2">
+                By creating an account, you agree to our:
+              </p>
+              <div className="flex gap-2 text-xs">
+                <Link to="/legal/terms" className="text-primary hover:underline">
+                  Terms of Service
+                </Link>
+                <span className="text-muted-foreground">and</span>
+                <Link to="/legal/privacy" className="text-primary hover:underline">
+                  Privacy Policy
+                </Link>
+              </div>
+            </div>
+          )}
           
           <p className="text-center text-sm text-muted-foreground mt-6">
             {isSignUp ? 'Already have an account?' : "Don't have an account?"}{' '}
