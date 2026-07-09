@@ -6,6 +6,28 @@ create table public.profiles (
   avatar_url text,
   monthly_revenue_kes numeric,
   business_name text,
+  business_segment text,
+  industry text,
+  phone_number text,
+  onboarding_completed boolean default false,
+  -- Informal business fields
+  what_you_sell text,
+  how_you_get_paid text,
+  business_duration text,
+  record_keeping_method text,
+  -- Startup fields
+  startup_stage text,
+  has_existing_records boolean,
+  seeking_funding boolean,
+  -- SME fields
+  employee_count text,
+  uses_accounting_software boolean,
+  primary_revenue_source text,
+  -- Lender fields
+  institution_name text,
+  institution_type text,
+  loan_sizes_interest text,
+  regulatory_status text,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );

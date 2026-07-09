@@ -1,17 +1,33 @@
-import { createFileRoute, Outlet, Link, useNavigate } from '@tanstack/react-router'
+import { createFileRoute, Outlet, Link, useNavigate, redirect } from '@tanstack/react-router'
 import { Logo } from '@/components/Logo'
 import { Button } from '@/components/ui/button'
 import { LayoutDashboard, Wallet, CreditCard, MessageSquare, LogOut, Menu, X } from 'lucide-react'
 import { useState } from 'react'
+import { supabase } from '@/lib/supabase'
 
 export const Route = createFileRoute('/_authenticated')({
   component: AuthenticatedLayout,
-  beforeLoad: ({ location }) => {
-    // In production, this would check for actual auth session
-    // For now, we'll allow access for development
-    // if (!isAuthenticated) {
-    //   throw redirect({ to: '/auth', search: { redirect: location.href } })
-    // }
+  beforeLoad: async ({ location }) => {
+    // Check for active Supabase session
+    const { data: { session } } = await supabase.auth.getSession()
+    
+    if (!session) {
+      throw redirect({ 
+        to: '/auth', 
+        search: { redirect: location.href } 
+      })
+    }
+
+    // Check if user has completed onboarding
+    const { data: profile } = await supabase
+      .from('profiles')
+      .select('onboarding_completed')
+      .eq('id', session.user.id)
+      .single()
+
+    if (!profile || !profile.onboarding_completed) {
+      throw redirect({ to: '/onboarding' })
+    }
   },
 })
 
@@ -19,8 +35,8 @@ function AuthenticatedLayout() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const navigate = useNavigate()
 
-  const handleSignOut = () => {
-    // This will be replaced with actual Supabase sign out
+  const handleSignOut = async () => {
+    await supabase.auth.signOut()
     navigate({ to: '/auth' })
   }
 
